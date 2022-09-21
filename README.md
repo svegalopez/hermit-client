@@ -17,7 +17,7 @@ A template for creating Hermit apps with React and Typescript.
 
 ## Automated Deployments
 
-- Deployed with Vercel and Github Actions
+- Deployed with Github Actions to Github Pages
 
 ## Fully Tested
 
