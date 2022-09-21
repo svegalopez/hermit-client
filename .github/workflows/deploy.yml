@@ -16,7 +16,7 @@ jobs:
         run: npm i
 
       - name: Serve
-        run: npm start & npx wait-on http://localhost:3000
+        run: npm start & npx wait-on http://localhost:3000/hermit-client
 
       - name: Test
         run: npx cypress run
