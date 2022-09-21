@@ -15,6 +15,9 @@ jobs:
       - name: Pre Deploy
         run: npm i && npm run build
 
+      - name: Test
+        run: npx cypress run
+
       - name: Deploy with gh-pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
