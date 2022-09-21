@@ -7,6 +7,7 @@ describe('Basic', () => {
   it('it should render a welcome heading', () => {
     cy.visit('http://localhost:3000/hermit-client');
     cy.get('.app').find('h1').contains('Welcome');
+    cy.get('.app').find('h1').click();
   })
 });
 
