@@ -16,7 +16,7 @@ jobs:
         run: npm i && npm run build
 
       - name: Serve
-        run: npm i serve && npx serve -s build
+        run: npm i serve && npx serve -s build &
 
       - name: Test
         run: npx cypress run
