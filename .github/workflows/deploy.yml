@@ -16,7 +16,8 @@ jobs:
         run: npm i
 
       - name: Serve
-        run: npm start &
+        run: npm start
+        wait-on: http-get://localhost:3000
 
       - name: Test
         run: npx cypress run
