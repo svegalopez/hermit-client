@@ -1,7 +1,8 @@
+import "./App.scss";
 import React from "react";
 
 function App() {
-  return <div className="app">App Shell</div>;
+  return <div className="app"></div>;
 }
 
 export default App;
