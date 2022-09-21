@@ -17,9 +17,9 @@ A template for creating Hermit apps with React and Typescript.
 
 ## Automated Deployments
 
-- Deployed with Github Actions to Github Pages
-- Deployed on merge to main
+- [x] Deployed with Github Actions to Github Pages
+- [x] Deployed on merge to main
 
 ## Fully Tested
 
-- Tested with Cypress.js
+- [] Tested with Cypress.js
