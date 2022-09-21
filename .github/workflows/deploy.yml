@@ -1,0 +1,16 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main] # Must match the name of your repo's default branch
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v3
+
+      - name: Deploy
+        run: npm i && npm run deploy
