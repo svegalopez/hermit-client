@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hermit-client/static/css/main.f8fea764.css",
+    "main.js": "/hermit-client/static/js/main.a6ba1a4f.js",
+    "index.html": "/hermit-client/index.html",
+    "main.f8fea764.css.map": "/hermit-client/static/css/main.f8fea764.css.map",
+    "main.a6ba1a4f.js.map": "/hermit-client/static/js/main.a6ba1a4f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8fea764.css",
+    "static/js/main.a6ba1a4f.js"
+  ]
+}
