@@ -14,3 +14,11 @@ A template for creating Hermit apps with React and Typescript.
 
 - Includes a complete user authentication/authorization system based on JWTs.
 - Protected Routes
+
+## Automated Deployments
+
+- Deployed with Vercel and Github Actions
+
+## Fully Tested
+
+- Tested with Cypress.js
