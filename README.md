@@ -22,4 +22,4 @@ A template for creating Hermit apps with React and Typescript.
 
 ## Fully Tested
 
-- [] Tested with Cypress.js
+- [ ] Tested with Cypress.js
