@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hermit-client/static/css/main.b3b7fbe8.css",
-    "main.js": "/hermit-client/static/js/main.ad3f3d66.js",
+    "main.js": "/hermit-client/static/js/main.f4227b51.js",
     "static/media/shell.jpg": "/hermit-client/static/media/shell.f938b275f8c1d6ebce8a.jpg",
     "index.html": "/hermit-client/index.html",
     "main.b3b7fbe8.css.map": "/hermit-client/static/css/main.b3b7fbe8.css.map",
-    "main.ad3f3d66.js.map": "/hermit-client/static/js/main.ad3f3d66.js.map"
+    "main.f4227b51.js.map": "/hermit-client/static/js/main.f4227b51.js.map"
   },
   "entrypoints": [
     "static/css/main.b3b7fbe8.css",
-    "static/js/main.ad3f3d66.js"
+    "static/js/main.f4227b51.js"
   ]
 }
