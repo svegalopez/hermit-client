@@ -1,10 +1,18 @@
 import "./App.scss";
-import React from "react";
+import React, { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    console.log("Rendered!");
+  }, []);
+
+  const clickHandler = () => {
+    console.log("ran...");
+  };
+
   return (
     <div className="app">
-      <h1>Welcome!</h1>
+      <h1 onClick={clickHandler}>Welcome!</h1>
     </div>
   );
 }

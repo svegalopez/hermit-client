@@ -21,6 +21,9 @@ jobs:
       - name: Test
         run: npx cypress run
 
+      - name: Enforce Coverage
+        run: npx nyc check-coverage --lines 100
+
       - name: Build
         run: npm run build
 
