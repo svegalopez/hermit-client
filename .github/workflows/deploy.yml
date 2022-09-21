@@ -12,14 +12,17 @@ jobs:
       - name: Code Checkout
         uses: actions/checkout@v3
 
-      - name: Pre Deploy
-        run: npm i && npm run build
+      - name: Install
+        run: npm i
 
       - name: Serve
-        run: npm i serve && npx serve -s build
+        run: npm start &
 
       - name: Test
         run: npx cypress run
+
+      - name: Build
+        run: npm run build
 
       - name: Deploy with gh-pages
         run: |
