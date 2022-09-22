@@ -1,78 +1,306 @@
 {
-  "/Users/sebastian/Documents/repos/hermit-client/src/App.tsx": {
-    "path": "/Users/sebastian/Documents/repos/hermit-client/src/App.tsx",
+  "/Users/sebastian/Documents/repos/hermit-client/src/context/authContext.ts": {
+    "path": "/Users/sebastian/Documents/repos/hermit-client/src/context/authContext.ts",
     "statementMap": {
       "0": {
         "start": {
-          "line": 5,
-          "column": 2
+          "line": 13,
+          "column": 16
         },
         "end": {
-          "line": 7,
-          "column": 9
+          "line": 17,
+          "column": 2
         }
       },
       "1": {
         "start": {
-          "line": 6,
-          "column": 4
+          "line": 15,
+          "column": 17
         },
         "end": {
-          "line": 6,
-          "column": 29
+          "line": 15,
+          "column": 21
         }
       },
       "2": {
         "start": {
-          "line": 9,
-          "column": 23
+          "line": 16,
+          "column": 18
         },
         "end": {
-          "line": 11,
-          "column": 3
-        }
-      },
-      "3": {
-        "start": {
-          "line": 10,
-          "column": 4
-        },
-        "end": {
-          "line": 10,
-          "column": 26
-        }
-      },
-      "4": {
-        "start": {
-          "line": 13,
-          "column": 2
-        },
-        "end": {
-          "line": 17,
-          "column": 4
+          "line": 16,
+          "column": 22
         }
       }
     },
     "fnMap": {
       "0": {
-        "name": "App",
+        "name": "(anonymous_0)",
         "decl": {
           "start": {
-            "line": 4,
-            "column": 9
+            "line": 15,
+            "column": 11
           },
           "end": {
-            "line": 4,
+            "line": 15,
             "column": 12
           }
         },
         "loc": {
           "start": {
-            "line": 4,
-            "column": 15
+            "line": 15,
+            "column": 17
           },
           "end": {
-            "line": 18,
+            "line": 15,
+            "column": 21
+          }
+        },
+        "line": 15
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 16,
+            "column": 12
+          },
+          "end": {
+            "line": 16,
+            "column": 13
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 18
+          },
+          "end": {
+            "line": 16,
+            "column": 22
+          }
+        },
+        "line": 16
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 3,
+      "1": 0,
+      "2": 0
+    },
+    "f": {
+      "0": 0,
+      "1": 0
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "2a64764ebdb0c615cc7e6dbb11fc631267fda18c"
+  },
+  "/Users/sebastian/Documents/repos/hermit-client/src/hooks/useAuth.ts": {
+    "path": "/Users/sebastian/Documents/repos/hermit-client/src/hooks/useAuth.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 4,
+          "column": 16
+        },
+        "end": {
+          "line": 41,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 5,
+          "column": 34
+        },
+        "end": {
+          "line": 5,
+          "column": 48
+        }
+      },
+      "2": {
+        "start": {
+          "line": 6,
+          "column": 28
+        },
+        "end": {
+          "line": 6,
+          "column": 55
+        }
+      },
+      "3": {
+        "start": {
+          "line": 8,
+          "column": 4
+        },
+        "end": {
+          "line": 21,
+          "column": 11
+        }
+      },
+      "4": {
+        "start": {
+          "line": 10,
+          "column": 8
+        },
+        "end": {
+          "line": 20,
+          "column": 17
+        }
+      },
+      "5": {
+        "start": {
+          "line": 11,
+          "column": 23
+        },
+        "end": {
+          "line": 11,
+          "column": 51
+        }
+      },
+      "6": {
+        "start": {
+          "line": 12,
+          "column": 12
+        },
+        "end": {
+          "line": 17,
+          "column": 13
+        }
+      },
+      "7": {
+        "start": {
+          "line": 13,
+          "column": 29
+        },
+        "end": {
+          "line": 13,
+          "column": 53
+        }
+      },
+      "8": {
+        "start": {
+          "line": 14,
+          "column": 16
+        },
+        "end": {
+          "line": 14,
+          "column": 32
+        }
+      },
+      "9": {
+        "start": {
+          "line": 16,
+          "column": 16
+        },
+        "end": {
+          "line": 16,
+          "column": 29
+        }
+      },
+      "10": {
+        "start": {
+          "line": 19,
+          "column": 12
+        },
+        "end": {
+          "line": 19,
+          "column": 30
+        }
+      },
+      "11": {
+        "start": {
+          "line": 23,
+          "column": 18
+        },
+        "end": {
+          "line": 38,
+          "column": 23
+        }
+      },
+      "12": {
+        "start": {
+          "line": 24,
+          "column": 8
+        },
+        "end": {
+          "line": 37,
+          "column": 10
+        }
+      },
+      "13": {
+        "start": {
+          "line": 29,
+          "column": 20
+        },
+        "end": {
+          "line": 29,
+          "column": 85
+        }
+      },
+      "14": {
+        "start": {
+          "line": 30,
+          "column": 20
+        },
+        "end": {
+          "line": 30,
+          "column": 48
+        }
+      },
+      "15": {
+        "start": {
+          "line": 33,
+          "column": 20
+        },
+        "end": {
+          "line": 33,
+          "column": 52
+        }
+      },
+      "16": {
+        "start": {
+          "line": 34,
+          "column": 20
+        },
+        "end": {
+          "line": 34,
+          "column": 34
+        }
+      },
+      "17": {
+        "start": {
+          "line": 40,
+          "column": 4
+        },
+        "end": {
+          "line": 40,
+          "column": 17
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 4,
+            "column": 16
+          },
+          "end": {
+            "line": 4,
+            "column": 17
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 22
+          },
+          "end": {
+            "line": 41,
             "column": 1
           }
         },
@@ -82,67 +310,910 @@
         "name": "(anonymous_1)",
         "decl": {
           "start": {
-            "line": 5,
-            "column": 12
+            "line": 8,
+            "column": 14
           },
           "end": {
-            "line": 5,
-            "column": 13
+            "line": 8,
+            "column": 15
           }
         },
         "loc": {
           "start": {
-            "line": 5,
-            "column": 18
+            "line": 8,
+            "column": 20
           },
           "end": {
-            "line": 7,
-            "column": 3
+            "line": 21,
+            "column": 5
           }
         },
-        "line": 5
+        "line": 8
       },
       "2": {
         "name": "(anonymous_2)",
         "decl": {
           "start": {
-            "line": 9,
+            "line": 10,
+            "column": 19
+          },
+          "end": {
+            "line": 10,
+            "column": 20
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 25
+          },
+          "end": {
+            "line": 20,
+            "column": 9
+          }
+        },
+        "line": 10
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 23,
+            "column": 26
+          },
+          "end": {
+            "line": 23,
+            "column": 27
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 32
+          },
+          "end": {
+            "line": 38,
+            "column": 5
+          }
+        },
+        "line": 23
+      },
+      "4": {
+        "name": "(anonymous_4)",
+        "decl": {
+          "start": {
+            "line": 28,
             "column": 23
           },
           "end": {
-            "line": 9,
+            "line": 28,
             "column": 24
           }
         },
         "loc": {
           "start": {
-            "line": 9,
+            "line": 28,
+            "column": 63
+          },
+          "end": {
+            "line": 31,
+            "column": 17
+          }
+        },
+        "line": 28
+      },
+      "5": {
+        "name": "(anonymous_5)",
+        "decl": {
+          "start": {
+            "line": 32,
+            "column": 24
+          },
+          "end": {
+            "line": 32,
+            "column": 25
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 32,
+            "column": 30
+          },
+          "end": {
+            "line": 35,
+            "column": 17
+          }
+        },
+        "line": 32
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 12
+          },
+          "end": {
+            "line": 17,
+            "column": 13
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 12,
+              "column": 12
+            },
+            "end": {
+              "line": 17,
+              "column": 13
+            }
+          },
+          {
+            "start": {
+              "line": 12,
+              "column": 12
+            },
+            "end": {
+              "line": 17,
+              "column": 13
+            }
+          }
+        ],
+        "line": 12
+      }
+    },
+    "s": {
+      "0": 3,
+      "1": 7,
+      "2": 7,
+      "3": 7,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 0,
+      "8": 0,
+      "9": 3,
+      "10": 3,
+      "11": 7,
+      "12": 7,
+      "13": 1,
+      "14": 1,
+      "15": 0,
+      "16": 0,
+      "17": 7
+    },
+    "f": {
+      "0": 7,
+      "1": 3,
+      "2": 3,
+      "3": 7,
+      "4": 1,
+      "5": 0
+    },
+    "b": {
+      "0": [
+        0,
+        3
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "2d56806b42d84e3d53910c2b61a9a7c25acfcaa2"
+  },
+  "/Users/sebastian/Documents/repos/hermit-client/src/pages/Home/Home.tsx": {
+    "path": "/Users/sebastian/Documents/repos/hermit-client/src/pages/Home/Home.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 6,
+          "column": 15
+        },
+        "end": {
+          "line": 6,
+          "column": 34
+        }
+      },
+      "1": {
+        "start": {
+          "line": 7,
+          "column": 2
+        },
+        "end": {
+          "line": 7,
+          "column": 51
+        }
+      },
+      "2": {
+        "start": {
+          "line": 7,
+          "column": 17
+        },
+        "end": {
+          "line": 7,
+          "column": 51
+        }
+      },
+      "3": {
+        "start": {
+          "line": 9,
+          "column": 2
+        },
+        "end": {
+          "line": 9,
+          "column": 23
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "Home",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 24
+          },
+          "end": {
+            "line": 5,
+            "column": 28
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 31
+          },
+          "end": {
+            "line": 10,
+            "column": 1
+          }
+        },
+        "line": 5
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 2
+          },
+          "end": {
+            "line": 7,
+            "column": 51
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 7,
+              "column": 2
+            },
+            "end": {
+              "line": 7,
+              "column": 51
+            }
+          },
+          {
+            "start": {
+              "line": 7,
+              "column": 2
+            },
+            "end": {
+              "line": 7,
+              "column": 51
+            }
+          }
+        ],
+        "line": 7
+      }
+    },
+    "s": {
+      "0": 2,
+      "1": 2,
+      "2": 0,
+      "3": 2
+    },
+    "f": {
+      "0": 2
+    },
+    "b": {
+      "0": [
+        0,
+        2
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "cdf9e46e3fcde04129e58cbcd76f61672ec2f4b6"
+  },
+  "/Users/sebastian/Documents/repos/hermit-client/src/pages/Login/Login.tsx": {
+    "path": "/Users/sebastian/Documents/repos/hermit-client/src/pages/Login/Login.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 6,
+          "column": 19
+        },
+        "end": {
+          "line": 6,
+          "column": 30
+        }
+      },
+      "1": {
+        "start": {
+          "line": 7,
+          "column": 14
+        },
+        "end": {
+          "line": 7,
+          "column": 33
+        }
+      },
+      "2": {
+        "start": {
+          "line": 9,
+          "column": 2
+        },
+        "end": {
+          "line": 9,
+          "column": 50
+        }
+      },
+      "3": {
+        "start": {
+          "line": 9,
+          "column": 16
+        },
+        "end": {
+          "line": 9,
+          "column": 50
+        }
+      },
+      "4": {
+        "start": {
+          "line": 11,
+          "column": 22
+        },
+        "end": {
+          "line": 13,
+          "column": 3
+        }
+      },
+      "5": {
+        "start": {
+          "line": 12,
+          "column": 4
+        },
+        "end": {
+          "line": 12,
+          "column": 54
+        }
+      },
+      "6": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
+          "column": 4
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "Login",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 24
+          },
+          "end": {
+            "line": 5,
             "column": 29
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 32
+          },
+          "end": {
+            "line": 23,
+            "column": 1
+          }
+        },
+        "line": 5
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 11,
+            "column": 22
           },
           "end": {
             "line": 11,
+            "column": 23
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 28
+          },
+          "end": {
+            "line": 13,
             "column": 3
           }
         },
+        "line": 11
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 2
+          },
+          "end": {
+            "line": 9,
+            "column": 50
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 9,
+              "column": 2
+            },
+            "end": {
+              "line": 9,
+              "column": 50
+            }
+          },
+          {
+            "start": {
+              "line": 9,
+              "column": 2
+            },
+            "end": {
+              "line": 9,
+              "column": 50
+            }
+          }
+        ],
         "line": 9
       }
     },
-    "branchMap": {},
     "s": {
-      "0": 3,
-      "1": 3,
-      "2": 3,
-      "3": 0,
-      "4": 3
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
     },
     "f": {
-      "0": 3,
-      "1": 3,
-      "2": 0
+      "0": 2,
+      "1": 1
     },
-    "b": {},
+    "b": {
+      "0": [
+        1,
+        1
+      ]
+    },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "64905bc6d47691f1bde190db6a4ee3e1cd1b13d9"
+    "hash": "7d8aab764f4f736ae2996bb129b4ecf496020426"
+  },
+  "/Users/sebastian/Documents/repos/hermit-client/src/pages/Profile/Profile.tsx": {
+    "path": "/Users/sebastian/Documents/repos/hermit-client/src/pages/Profile/Profile.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 6,
+          "column": 15
+        },
+        "end": {
+          "line": 6,
+          "column": 34
+        }
+      },
+      "1": {
+        "start": {
+          "line": 7,
+          "column": 2
+        },
+        "end": {
+          "line": 7,
+          "column": 45
+        }
+      },
+      "2": {
+        "start": {
+          "line": 7,
+          "column": 18
+        },
+        "end": {
+          "line": 7,
+          "column": 45
+        }
+      },
+      "3": {
+        "start": {
+          "line": 9,
+          "column": 2
+        },
+        "end": {
+          "line": 9,
+          "column": 63
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "Profile",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 24
+          },
+          "end": {
+            "line": 5,
+            "column": 31
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 34
+          },
+          "end": {
+            "line": 10,
+            "column": 1
+          }
+        },
+        "line": 5
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 2
+          },
+          "end": {
+            "line": 7,
+            "column": 45
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 7,
+              "column": 2
+            },
+            "end": {
+              "line": 7,
+              "column": 45
+            }
+          },
+          {
+            "start": {
+              "line": 7,
+              "column": 2
+            },
+            "end": {
+              "line": 7,
+              "column": 45
+            }
+          }
+        ],
+        "line": 7
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 1,
+      "2": 0,
+      "3": 1
+    },
+    "f": {
+      "0": 1
+    },
+    "b": {
+      "0": [
+        0,
+        1
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "77530a2990420df5cdbecda1bb1c2893f1f933df"
+  },
+  "/Users/sebastian/Documents/repos/hermit-client/src/components/Header.tsx": {
+    "path": "/Users/sebastian/Documents/repos/hermit-client/src/components/Header.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 6,
+          "column": 19
+        },
+        "end": {
+          "line": 6,
+          "column": 32
+        }
+      },
+      "1": {
+        "start": {
+          "line": 7,
+          "column": 27
+        },
+        "end": {
+          "line": 7,
+          "column": 46
+        }
+      },
+      "2": {
+        "start": {
+          "line": 9,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 4
+        }
+      },
+      "3": {
+        "start": {
+          "line": 14,
+          "column": 31
+        },
+        "end": {
+          "line": 14,
+          "column": 49
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 15
+          },
+          "end": {
+            "line": 5,
+            "column": 16
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 21
+          },
+          "end": {
+            "line": 18,
+            "column": 1
+          }
+        },
+        "line": 5
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 14,
+            "column": 25
+          },
+          "end": {
+            "line": 14,
+            "column": 26
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 31
+          },
+          "end": {
+            "line": 14,
+            "column": 49
+          }
+        },
+        "line": 14
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 7
+          },
+          "end": {
+            "line": 15,
+            "column": 7
+          }
+        },
+        "type": "cond-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 12,
+              "column": 8
+            },
+            "end": {
+              "line": 12,
+              "column": 48
+            }
+          },
+          {
+            "start": {
+              "line": 14,
+              "column": 8
+            },
+            "end": {
+              "line": 14,
+              "column": 65
+            }
+          }
+        ],
+        "line": 11
+      }
+    },
+    "s": {
+      "0": 5,
+      "1": 5,
+      "2": 5,
+      "3": 0
+    },
+    "f": {
+      "0": 5,
+      "1": 0
+    },
+    "b": {
+      "0": [
+        2,
+        3
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "2f474155f06cb02b8e2b76f7373f765f5d50c233"
+  },
+  "/Users/sebastian/Documents/repos/hermit-client/src/App.tsx": {
+    "path": "/Users/sebastian/Documents/repos/hermit-client/src/App.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 11,
+          "column": 15
+        },
+        "end": {
+          "line": 11,
+          "column": 24
+        }
+      },
+      "1": {
+        "start": {
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 15,
+          "column": 3
+        }
+      },
+      "2": {
+        "start": {
+          "line": 14,
+          "column": 4
+        },
+        "end": {
+          "line": 14,
+          "column": 43
+        }
+      },
+      "3": {
+        "start": {
+          "line": 17,
+          "column": 2
+        },
+        "end": {
+          "line": 30,
+          "column": 4
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "App",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 9
+          },
+          "end": {
+            "line": 10,
+            "column": 12
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 15
+          },
+          "end": {
+            "line": 31,
+            "column": 1
+          }
+        },
+        "line": 10
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 2
+          },
+          "end": {
+            "line": 15,
+            "column": 3
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 13,
+              "column": 2
+            },
+            "end": {
+              "line": 15,
+              "column": 3
+            }
+          },
+          {
+            "start": {
+              "line": 13,
+              "column": 2
+            },
+            "end": {
+              "line": 15,
+              "column": 3
+            }
+          }
+        ],
+        "line": 13
+      }
+    },
+    "s": {
+      "0": 7,
+      "1": 7,
+      "2": 3,
+      "3": 4
+    },
+    "f": {
+      "0": 7
+    },
+    "b": {
+      "0": [
+        3,
+        4
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "0bdec195d5e5b0502df41d0f18dc161ee3eb60a9"
   },
   "/Users/sebastian/Documents/repos/hermit-client/src/index.tsx": {
     "path": "/Users/sebastian/Documents/repos/hermit-client/src/index.tsx",

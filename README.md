@@ -12,8 +12,8 @@ A template for creating Hermit apps with React and Typescript.
 
 ## Auth
 
-- Includes a complete user authentication/authorization system based on JWTs.
-- Protected Routes
+- [x] Includes a complete user authentication system based on JWTs.
+- [x] Protected Routes with custom hooks
 
 ## Automated Deployments
 

@@ -22,7 +22,7 @@ jobs:
         run: npx cypress run
 
       - name: Enforce Coverage
-        run: npx nyc check-coverage --lines 100
+        run: npx nyc check-coverage --lines 75
 
       - name: Build
         run: npm run build
