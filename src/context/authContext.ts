@@ -4,13 +4,13 @@ export interface User {
     name: string;
 }
 
-interface AuthCtx {
+interface IAuthCtx {
     user: User | null;
     login: (username: string, password: string) => void,
     logout: () => void
 }
 
-const AuthCtx = createContext<AuthCtx>({
+const AuthCtx = createContext<IAuthCtx>({
     user: null,
     login: () => null,
     logout: () => null

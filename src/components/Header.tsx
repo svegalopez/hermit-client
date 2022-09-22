@@ -2,7 +2,7 @@ import { useContext } from "react";
 import AuthCtx from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 
-export default () => {
+const Header = () => {
   const navigate = useNavigate();
   const { logout, user } = useContext(AuthCtx);
 
@@ -16,3 +16,5 @@ export default () => {
     </div>
   );
 };
+
+export default Header;

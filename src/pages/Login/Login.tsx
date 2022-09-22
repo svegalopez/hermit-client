@@ -15,7 +15,7 @@ export default function Login() {
   return (
     <div>
       <input ref={username as any} type="text" />
-      <button role="login" onClick={handleClick}>
+      <button app-role="login" onClick={handleClick}>
         Login
       </button>
     </div>
