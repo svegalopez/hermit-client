@@ -1,12 +1,12 @@
 import { createContext } from "react";
 
 export interface User {
-    name: string;
+    email: string
 }
 
 interface IAuthCtx {
     user: User | null;
-    login: (username: string, password: string) => void,
+    login: (email: string, password: string) => void,
     logout: () => void
 }
 

@@ -7,17 +7,27 @@ const useAuth = () => {
 
     useEffect(() => {
         // Asynchronously fetch the current user
-        setTimeout(() => {
-            let user = localStorage.getItem('user');
-            if (user) {
-                let parsed = JSON.parse(user) as User
-                setUser(parsed);
-            } else {
-                setUser(null)
-            }
-
+        const token = localStorage.getItem('token');
+        if (!token) {
             setLoading(false);
-        }, 2000);
+            return;
+        }
+
+        async function fetchuser() {
+            const res = await fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/current`, {
+                method: 'GET',
+                headers: { 'Authorization': token! },
+                credentials: "include"
+            })
+
+            if (!res.ok) return; // Will load forever
+            const { email } = await res.json();
+            setUser({ email });
+            setLoading(false);
+        }
+
+        fetchuser();
+
     }, []);
 
     const value = useMemo(() => {
@@ -25,12 +35,34 @@ const useAuth = () => {
             loading: loading,
             value: {
                 user: user,
-                login: (username: string, password: string) => {
-                    localStorage.setItem('user', JSON.stringify({ name: username }));
-                    setUser({ name: username });
+                login: async (email: string, password: string) => {
+                    let res = await fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/login`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, password }),
+                        credentials: 'include'
+                    })
+                    const { token } = await res.json();
+                    localStorage.setItem('token', token);
+
+                    res = await fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/current`, {
+                        method: 'GET',
+                        headers: { 'Authorization': token },
+                        credentials: "include"
+                    })
+                    const user = await res.json();
+                    setUser({ email: user.email });
                 },
-                logout: () => {
-                    localStorage.removeItem('user');
+                logout: async () => {
+                    const token = localStorage.getItem('token');
+                    if (!token) return;
+
+                    fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/logout`, {
+                        method: 'DELETE',
+                        headers: { 'Authorization': token },
+                        credentials: "include"
+                    })
+                    localStorage.removeItem('token');
                     setUser(null);
                 },
             }

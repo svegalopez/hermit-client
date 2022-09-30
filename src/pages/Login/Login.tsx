@@ -3,19 +3,20 @@ import { Navigate } from "react-router-dom";
 import AuthCtx from "../../context/authContext";
 
 export default function Login() {
-  const username = createRef();
   const ctx = useContext(AuthCtx);
-
   if (ctx.user) return <Navigate to="/profile" />;
 
-  const handleClick = () => {
-    ctx.login((username as any).current.value, "123");
-  };
+  const email = createRef<HTMLInputElement>();
+  const password = createRef<HTMLInputElement>();
 
   return (
     <div>
-      <input ref={username as any} type="text" />
-      <button app-role="login" onClick={handleClick}>
+      <input ref={password} type="password" />
+      <input ref={email} type="email" />
+      <button
+        app-role="login"
+        onClick={() => ctx.login(email.current!.value, password.current!.value)}
+      >
         Login
       </button>
     </div>
