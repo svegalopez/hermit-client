@@ -20,13 +20,13 @@ const useAuth = () => {
                 credentials: "include"
             })
 
-            if (!res.ok) return; // Will load forever
+            if (!res.ok) return setLoading(false);
             const { email } = await res.json();
             setUser({ email });
             setLoading(false);
         }
 
-        fetchuser();
+        fetchuser().catch(err => console.error(err));
 
     }, []);
 
@@ -42,6 +42,9 @@ const useAuth = () => {
                         body: JSON.stringify({ email, password }),
                         credentials: 'include'
                     })
+                    if (!res.ok) {
+                        throw new Error('Error logging in, please check your credentials');
+                    }
                     const { token } = await res.json();
                     localStorage.setItem('token', token);
 
@@ -50,18 +53,24 @@ const useAuth = () => {
                         headers: { 'Authorization': token },
                         credentials: "include"
                     })
+                    if (!res.ok) {
+                        throw new Error('Error logging in, please try again');
+                    }
                     const user = await res.json();
                     setUser({ email: user.email });
                 },
                 logout: async () => {
+
                     const token = localStorage.getItem('token');
                     if (!token) return;
 
+                    // TODO deleting the agentKey should not require a token
                     fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/logout`, {
                         method: 'DELETE',
                         headers: { 'Authorization': token },
                         credentials: "include"
-                    })
+                    }).catch((err) => console.error(err));
+
                     localStorage.removeItem('token');
                     setUser(null);
                 },
