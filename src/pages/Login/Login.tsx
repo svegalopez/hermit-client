@@ -1,11 +1,11 @@
-import { createRef, useContext } from "react";
+import { createRef, useContext, useState } from "react";
 import { Navigate } from "react-router-dom";
 import AuthCtx from "../../context/authContext";
-import ToastCtx from "../../context/toastContext";
+import Toaster from "../../components/Toaster";
 
 export default function Login() {
   const { user, login, logout } = useContext(AuthCtx);
-  const toastCtx = useContext(ToastCtx);
+  const [msg, setMsg] = useState<JSX.Element | null>(null);
 
   if (user) return <Navigate to="/profile" />;
 
@@ -15,7 +15,7 @@ export default function Login() {
   const handleLogin = () => {
     login(email.current!.value, password.current!.value).catch((err) => {
       console.error(err);
-      toastCtx.toast(
+      setMsg(
         <p>
           {err.message || "Cannot login at this time. See console for details"}
         </p>
@@ -31,6 +31,7 @@ export default function Login() {
       <button app-role="login" onClick={handleLogin}>
         Login
       </button>
+      {msg && <Toaster content={msg} setContent={setMsg} />}
     </div>
   );
 }

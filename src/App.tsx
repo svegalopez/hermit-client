@@ -7,20 +7,16 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
 import Header from "./components/Header";
-import ToastCtx, { IToastCtx } from "./context/toastContext";
-import Toaster from "./components/Toaster";
-import useToaster from "./hooks/useToaster";
 
 function App() {
   const auth = useAuth();
-  const [toastContent, toastContext] = useToaster();
 
   if (auth.loading) {
     return <div className="loading"></div>;
   }
 
   return (
-    <ToastCtx.Provider value={toastContext as IToastCtx}>
+    <>
       <AuthCtx.Provider value={auth.value}>
         <div className="app">
           <Header />
@@ -33,8 +29,8 @@ function App() {
       </AuthCtx.Provider>
 
       {/* The Toaster component displays messages on a popup  */}
-      <Toaster content={toastContent} />
-    </ToastCtx.Provider>
+      <div id="toaster-portal"></div>
+    </>
   );
 }
 

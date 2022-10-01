@@ -1,21 +1,21 @@
-import { useContext, useEffect } from "react";
-import ToastCtx from "../context/toastContext";
+import { useEffect } from "react";
+import { createPortal } from "react-dom";
 
-export default function Toaster({ content }) {
-  const { toast } = useContext(ToastCtx);
-
+export default function Toaster({ content, setContent }) {
   useEffect(() => {
-    setTimeout(() => toast(null), 5000);
+    // The toaster disappears after 7 seconds
+    setTimeout(() => setContent(null), 7000);
   });
 
   if (!content) return null;
 
-  return (
+  return createPortal(
     <div className="toaster-container">
       <div className="toaster-container-header">
-        <button onClick={() => toast(null)}> x </button>
+        <button> x </button>
       </div>
       {content}
-    </div>
+    </div>,
+    document.getElementById("toaster-portal")
   );
 }

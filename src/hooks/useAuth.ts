@@ -6,7 +6,6 @@ const useAuth = () => {
     const [user, setUser] = useState<User | null>(null);
 
     useEffect(() => {
-        // Asynchronously fetch the current user
         const token = localStorage.getItem('token');
         if (!token) {
             setLoading(false);
@@ -26,6 +25,7 @@ const useAuth = () => {
             setLoading(false);
         }
 
+        // Asynchronously fetch the current user
         fetchuser().catch(err => console.error(err));
 
     }, []);
