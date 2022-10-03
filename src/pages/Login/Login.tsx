@@ -20,7 +20,6 @@ export default function Login() {
           {err.message || "Cannot login at this time. See console for details"}
         </p>
       );
-      logout();
     });
   };
 

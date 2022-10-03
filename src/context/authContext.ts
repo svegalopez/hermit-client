@@ -4,13 +4,15 @@ export interface User {
     email: string
 }
 
-interface IAuthCtx {
+export interface IAuthCtx {
+    token: string;
     user: User | null;
     login: (email: string, password: string) => Promise<void>,
     logout: () => void
 }
 
 const AuthCtx = createContext<IAuthCtx>({
+    token: '',
     user: null,
     login: () => Promise.resolve(),
     logout: () => null
