@@ -5,17 +5,21 @@ import { User } from "../context/authContext";
 const useAuth = (): [boolean, IAuthCtx] => {
     const [loading, setLoading] = useState(true);
     const [creds, setCreds] = useState<{ user?: User, token?: string }>({});
+    const [tokenGetter, setTokenGetter] = useState<() => string>(() => '');
 
     useEffect(() => {
         async function fetchuser() {
-            const res = await fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/current`, {
+            const res = await fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/well-known`, {
                 method: 'GET',
                 credentials: "include"
             })
 
             if (!res.ok) return setLoading(false);
-            const { user, token }: { user: User, token: string } = await res.json();
-            setCreds({ user, token });
+            const { user, tp1, tp2, tp3 } = await res.json();
+            const token = `${tp3}.${tp2}.${tp1}`;
+
+            setCreds({ user });
+            setTokenGetter((prev) => () => token);
             setLoading(false);
         }
         // Asynchronously fetch the current user
@@ -24,8 +28,8 @@ const useAuth = (): [boolean, IAuthCtx] => {
 
     const authCtx: IAuthCtx = useMemo(() => {
         return {
-            token: creds.token!,
-            user: creds.user!,
+            token: tokenGetter,
+            user: creds.user,
             login: async (email: string, password: string) => {
                 let res = await fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/login`, {
                     method: 'POST',
@@ -37,19 +41,19 @@ const useAuth = (): [boolean, IAuthCtx] => {
                     throw new Error('Error logging in, please check your credentials');
                 }
                 const { token, user } = await res.json();
-                setCreds({ user, token });
+                setCreds({ user });
+                setTokenGetter((prev) => () => token);
             },
             logout: async () => {
-                // TODO deleting the agentKey should not require a token
                 fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/logout`, {
                     method: 'DELETE',
                     credentials: "include"
                 }).catch((err) => console.error(err));
-
                 setCreds({});
+                setTokenGetter((prev) => () => '')
             }
         };
-    }, [creds]);
+    }, [tokenGetter]);
 
     return [loading, authCtx];
 }

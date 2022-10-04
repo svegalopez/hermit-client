@@ -7,7 +7,7 @@ export default function Login() {
   const { user, login, logout } = useContext(AuthCtx);
   const [msg, setMsg] = useState<JSX.Element | null>(null);
 
-  if (user) return <Navigate to="/profile" />;
+  if (user) return <Navigate to="/" />;
 
   const email = createRef<HTMLInputElement>();
   const password = createRef<HTMLInputElement>();
