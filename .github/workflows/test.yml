@@ -19,7 +19,7 @@ jobs:
         run: npm i
 
       - name: Run app
-        run: npm run start:dev & npx wait-on http://localhost:3000
+        run: npm run start:test & npx wait-on http://localhost:3000
 
       - name: Run tests
         run: npx cypress run
