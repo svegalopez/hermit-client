@@ -4,6 +4,7 @@ describe('Basic', () => {
     cy.get('.header > button');
     // expect(true).to.be.true;
     // cy.get('.app').should('exist');
+    // dummy
   });
 
   // it('logs in', () => {
