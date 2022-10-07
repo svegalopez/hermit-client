@@ -1,6 +1,7 @@
 import { IAuthCtx } from './../context/authContext';
 import { useEffect, useMemo, useState } from "react";
 import { User } from "../context/authContext";
+import getHost from '../utils/getHost';
 
 const useAuth = (): [boolean, IAuthCtx] => {
     const [loading, setLoading] = useState(true);
@@ -9,7 +10,7 @@ const useAuth = (): [boolean, IAuthCtx] => {
 
     useEffect(() => {
         async function fetchuser() {
-            const res = await fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/well-known`, {
+            const res = await fetch(`${getHost()}/api/users/well-known`, {
                 method: 'GET',
                 credentials: "include"
             })
@@ -31,7 +32,7 @@ const useAuth = (): [boolean, IAuthCtx] => {
             token: tokenGetter,
             user: creds.user,
             login: async (email: string, password: string) => {
-                let res = await fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/login`, {
+                let res = await fetch(`${getHost()}/api/users/login`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password }),
@@ -45,7 +46,7 @@ const useAuth = (): [boolean, IAuthCtx] => {
                 setTokenGetter((prev) => () => token);
             },
             logout: async () => {
-                fetch(`${process.env.REACT_APP_HERMIT_HOST}/api/users/logout`, {
+                fetch(`${getHost()}/api/users/logout`, {
                     method: 'DELETE',
                     credentials: "include"
                 }).catch((err) => console.error(err));

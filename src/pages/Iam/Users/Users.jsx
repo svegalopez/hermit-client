@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import AuthCtx from "../../../context/authContext";
+import getHost from "../../../utils/getHost";
 
 export default function Users() {
   // this page fetches a list of users
@@ -8,13 +9,10 @@ export default function Users() {
 
   useEffect(() => {
     async function fetchusers() {
-      const res = await fetch(
-        `${process.env.REACT_APP_HERMIT_HOST}/api/users`,
-        {
-          method: "GET",
-          headers: { Authorization: token() },
-        }
-      );
+      const res = await fetch(`${getHost()}/api/users`, {
+        method: "GET",
+        headers: { Authorization: token() },
+      });
 
       if (!res.ok) return;
       const users = await res.json();
