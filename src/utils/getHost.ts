@@ -1,10 +1,15 @@
 export default function getHost() {
-
-    if (window.location.host.includes('localhost:')) {
-        // Hermit server is served at 4000 on local dev environments
-        return 'http://localhost:4000';
+    if (process.env.REACT_APP_HERMIT_HOST) {
+        return process.env.REACT_APP_HERMIT_HOST;
     }
 
+    if (window.location.hostname === 'localhost') {
+        return 'https://hermit-server-staging.herokuapp.com';
+    }
+
+    if (window.location.hostname === '127.0.0.1') {
+        return 'https://hermit-server-staging.herokuapp.com';
+    }
 
     let host = window.location.hostname.includes('staging') ?
         'https://hermit-server-staging.herokuapp.com' : 'https://hermit-server.herokuapp.com'
