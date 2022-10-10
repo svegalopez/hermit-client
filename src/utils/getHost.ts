@@ -11,12 +11,13 @@ export default function getHost() {
         return 'https://hermit-server-staging.herokuapp.com';
     }
 
-    if (window.location.hostname.includes('hermit.cloud')) {
-        console.log('using custom domain');
-        return 'https://server.hermit.cloud';
+    if (window.location.hostname.includes('staging.hermit.cloud')) {
+        console.log('using custom domain in staging');
+        return 'https://server-staging.hermit.cloud';
     }
 
-    let host = window.location.hostname.includes('staging') ?
-        'https://hermit-server-staging.herokuapp.com' : 'https://hermit-server.herokuapp.com'
-    return host;
+    if (window.location.hostname.includes('hermit.cloud')) {
+        console.log('using custom domain in prod');
+        return 'https://server.hermit.cloud';
+    }
 }
