@@ -1,5 +1,6 @@
+import "./Header.scss";
 import { useContext } from "react";
-import AuthCtx from "../context/authContext";
+import AuthCtx from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {

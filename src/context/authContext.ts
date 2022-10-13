@@ -1,7 +1,9 @@
 import { createContext } from "react";
 
 export interface User {
-    email: string
+    id: number
+    email: string,
+    roles: string[]
 }
 
 export interface IAuthCtx {
