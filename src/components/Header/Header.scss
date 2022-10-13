@@ -1,4 +1,7 @@
 .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     height: 40px;
     border-bottom: 2px solid black;
 }
