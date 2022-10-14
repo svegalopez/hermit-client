@@ -23,7 +23,10 @@ export const ChangePassword = () => {
 
   const { token } = useContext(AuthCtx);
   const [msg, setMsg] = useState<JSX.Element | null>(null);
-  const [changePW, { data, loading, error }] = useMutation(CHANGE_PASSWORD);
+  const [changePW, { data, loading, error }] = useMutation(
+    CHANGE_PASSWORD,
+    addToken(token)
+  );
 
   useEffect(() => {
     if (error) setMsg(<p>{error.message}</p>);
@@ -40,7 +43,6 @@ export const ChangePassword = () => {
         new: newPW.current!.value,
         confirmNew: confirmNewPW.current!.value,
       },
-      ...addToken(token),
     });
   };
 
