@@ -1,7 +1,7 @@
 describe('Basic', () => {
   it('passes', () => {
     cy.visit('http://localhost:3000/login');
-    cy.get('.header > button');
+    cy.get('.hc-header > .icon');
     // expect(true).to.be.true;
     // cy.get('.app').should('exist');
     // dummy
