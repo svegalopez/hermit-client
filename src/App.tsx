@@ -11,6 +11,7 @@ import Settings from "./pages/Settings/Settings";
 import Header from "./components/Header/Header";
 import Iam from "./pages/Iam/Iam";
 import Users from "./pages/Iam/Users/Users";
+import { ChangePassword } from "./pages/Settings/ChangePassword/ChangePassword";
 
 function App() {
   const [loading, creds] = useAuth();
@@ -28,7 +29,12 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />}></Route>
               <Route path="/login" element={<Login />}></Route>
-              <Route path="/settings" element={<Settings />}></Route>
+              <Route path="/settings" element={<Settings />}>
+                <Route index element={<Navigate to="change-password" />} />
+                <Route path="change-password" element={<ChangePassword />} />
+                <Route path="profile" element={<h1>Profile</h1>} />
+                <Route path="billing" element={<h1>Billing</h1>} />
+              </Route>
               <Route path="/iam" element={<Iam />}>
                 <Route index element={<Navigate to="users" />} />
                 <Route path="users" element={<Users />} />
