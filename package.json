@@ -19,6 +19,7 @@
     "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
     "react-router-dom": "^6.4.1",
     "react-scripts": "^5.0.1",
     "sass": "^1.54.9",
