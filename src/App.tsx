@@ -1,7 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { ApolloProvider } from "@apollo/client";
 
 import "./App.scss";
+import client from "./apollo-client";
 import AuthCtx from "./context/authContext";
 import useAuth from "./hooks/useAuth";
 import Home from "./pages/Home/Home";
@@ -10,25 +11,19 @@ import Settings from "./pages/Settings/Settings";
 import Header from "./components/Header/Header";
 import Iam from "./pages/Iam/Iam";
 import Users from "./pages/Iam/Users/Users";
-import getHost from "./utils/getHost";
-
-const client = new ApolloClient({
-  uri: `${getHost()}/graphql`,
-  cache: new InMemoryCache(),
-});
 
 function App() {
   const [loading, creds] = useAuth();
 
   if (loading) {
-    return <div className="loading"></div>;
+    return <div className="hc-loader">Loading...</div>;
   }
 
   return (
     <>
       <AuthCtx.Provider value={creds}>
         <ApolloProvider client={client}>
-          <div className="app">
+          <div className="hc-app">
             <Header />
             <Routes>
               <Route path="/" element={<Home />}></Route>
