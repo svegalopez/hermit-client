@@ -5,7 +5,7 @@ import getHost from '../utils/getHost';
 
 const useAuth = (): [boolean, IAuthCtx] => {
     const [loading, setLoading] = useState(true);
-    const [creds, setCreds] = useState<{ user?: User, token?: string }>({});
+    const [creds, setCreds] = useState<{ user: User | null, token?: string }>({ user: null });
     const [tokenGetter, setTokenGetter] = useState<() => string>(() => '');
 
     useEffect(() => {
@@ -45,13 +45,13 @@ const useAuth = (): [boolean, IAuthCtx] => {
                 setCreds({ user });
                 setTokenGetter((prev) => () => token);
             },
-            logout: async () => {
+            logout: () => {
                 fetch(`${getHost()}/api/users/logout`, {
                     method: 'DELETE',
                     credentials: "include"
                 }).catch((err) => console.error(err));
-                setCreds({});
-                setTokenGetter((prev) => () => '')
+                setCreds({ user: null });
+                setTokenGetter((prev) => () => '');
             }
         };
     }, [tokenGetter]);
