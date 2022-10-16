@@ -14,7 +14,15 @@ export type Scalars = {
 
 export type Mutation = {
     __typename?: 'Mutation';
+    changePassword: Scalars['String'];
     createUser: User;
+};
+
+
+export type MutationChangePasswordArgs = {
+    confirmNew: Scalars['String'];
+    current: Scalars['String'];
+    new: Scalars['String'];
 };
 
 
