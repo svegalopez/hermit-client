@@ -20,7 +20,7 @@ You can develop against the deployed staging environment, or run a local Hermit 
 
 ## Typescript + Apollo
 
-All data types that Hermit Server is responsible for are auto generated server-side using [graphql codegen](https://www.the-guild.dev/graphql/codegen). That means that you can type all queries and mutations like so:
+All data types that Hermit Client consumes are auto generated server-side using [graphql codegen](https://www.the-guild.dev/graphql/codegen). That means that you can type all queries and mutations like so:
 
 ```js
     useQuery<SomeType>(...)
