@@ -46,6 +46,14 @@ All integration tests will run against Hermit Server's staging environment.
 Github Actions is configured to run integration tests when a PR is opened against the `main` branch.
 The configuration is located at `.github/workflows/test.yml`. Itegration tests are found at `cypress/e2e`. The integration tests steps is configured to enforce test coverage, currently set at 50%, but the idea is to achieve 100% code coverage in the future.
 
+To run tests locally, first start the dev server in test mode :
+
+```
+npm run start:test
+```
+
+This will instrument the code in order for cypress to collect code coverage. The code coverage report can be found ar `coverage/lcov-report/index.html`. Open it in a browser and voila!
+
 ## Deployment
 
 Deployed with Heroku Pipelines. When code is pushed to the `main` branch, the application is deployed to a [staging environment](https://staging.hermit.cloud/). The application in the staging env can be promoted to production with the simple click of a button in the Heroku pipelines dashboard. The Procfile at the root of the project declares a `web` process in Heroku that will serve the static files that are produced by the `npm run build` step.
