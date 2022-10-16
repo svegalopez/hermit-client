@@ -46,13 +46,20 @@ All integration tests will run against Hermit Server's staging environment.
 Github Actions is configured to run integration tests when a PR is opened against the `main` branch.
 The configuration is located at `.github/workflows/test.yml`. Itegration tests are found at `cypress/e2e`. The integration tests steps is configured to enforce test coverage, currently set at 50%, but the idea is to achieve 100% code coverage in the future.
 
-To run tests locally, first start the dev server in test mode :
+To run tests locally, first start the dev server in test mode:
 
 ```
 npm run start:test
 ```
 
-This will instrument the code in order for cypress to collect code coverage. The code coverage report can be found ar `coverage/lcov-report/index.html`. Open it in a browser and voila!
+This will instrument the code in order for cypress to collect code coverage. Then run:
+
+```
+npx cypress open
+```
+
+And you will use Cypress' dashboard in order to run tests.
+The code coverage report can be found at `coverage/lcov-report/index.html`. Open it in a browser and voila!
 
 ## Deployment
 
