@@ -5,6 +5,7 @@ import Toaster from "../../../components/Toaster";
 import { createRef, useContext, useEffect, useState } from "react";
 import AuthCtx from "../../../context/authContext";
 import { addToken } from "../../../utils/addToken";
+import { Mutation, MutationChangePasswordArgs } from "../../../types";
 
 const CHANGE_PASSWORD = gql`
   mutation ChangePassword(
@@ -16,6 +17,8 @@ const CHANGE_PASSWORD = gql`
   }
 `;
 
+type MutationData = { changePassword: Mutation["changePassword"] };
+
 export const ChangePassword = () => {
   const currentPW = createRef<HTMLInputElement>();
   const newPW = createRef<HTMLInputElement>();
@@ -23,10 +26,11 @@ export const ChangePassword = () => {
 
   const { token } = useContext(AuthCtx);
   const [msg, setMsg] = useState<JSX.Element | null>(null);
-  const [changePW, { data, loading, error }] = useMutation(
-    CHANGE_PASSWORD,
-    addToken(token)
-  );
+
+  const [changePW, { data, loading, error }] = useMutation<
+    MutationData,
+    MutationChangePasswordArgs
+  >(CHANGE_PASSWORD, addToken(token));
 
   useEffect(() => {
     if (error) setMsg(<p>{error.message}</p>);
